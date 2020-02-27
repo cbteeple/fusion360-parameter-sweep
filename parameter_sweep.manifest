@@ -1,0 +1,10 @@
+{
+	"autodeskProduct":	"Fusion360",
+	"type":	"script",
+	"author":	"Clark Teeple",
+	"description":	{
+		"":	"Programatically generate and export tauruses of different aspect ratios. USAGE: Place 'permute: #,#,#' in the comment of any parameter you want to permute over."
+	},
+	"supportedOS":	"windows|mac",
+	"editEnabled":	true
+}
