@@ -19,8 +19,11 @@ def run(context):
         rootComp = design.rootComponent
 
         # Specify the folder to write out the results.
+        base_folder = 'C:/temp/STLExport/'
         part_name=adsk.core.Application.get().activeDocument.name
-        folder = 'C:/temp/STLExport/'+part_name+'/'
+        folder = base_folder + part_name+'/'
+
+        # TODO: Add a file dialog to set the save path with the default based on the "folder" variable
         
         file_base = part_name
 
