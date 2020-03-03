@@ -38,7 +38,7 @@ def run(context):
             comment = comment.lower()
 
             # If the paramters is one you want to include in the permutation, move forward.
-            if 'permute' in comment:
+            if 'permute' in comment or 'sweep' in comment:
                 param_dict = dict()
                 param_dict['item']=param
                 param_dict['name']=param.name
