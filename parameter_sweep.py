@@ -7,6 +7,44 @@ import os
 import itertools 
 
 
+def select_base_folder(ui,start_path=None):
+    settings_directory = os.path.dirname(os.path.realpath(__file__))
+    settings_file = os.path.join(settings_directory,'save_paths.cfg')
+
+    if start_path:
+        pass        
+    elif os.path.exists(settings_file):
+        with open(settings_file, 'r') as file:
+            start_path = file.readline()
+    else:
+        start_path = os.path.expanduser("~")
+    
+    if not os.path.exists(start_path):
+        os.makedirs(start_path)
+    
+    
+    # Set styles of file dialog.
+    folderDlg = ui.createFolderDialog()
+    folderDlg.title = 'Select the base folder'
+    folderDlg.initialDirectory	= start_path
+    
+    # Show folder dialog
+    folder = start_path
+    dlgResult = folderDlg.showDialog()
+    if dlgResult == adsk.core.DialogResults.DialogOK:
+        folder = folderDlg.folder
+
+
+    if not os.path.exists(folder):
+            os.makedirs(folder)
+
+    with open(settings_file, 'w') as file:
+        file.write(folder)
+
+    return folder
+
+
+
 def run(context):
     ui = None
     
@@ -19,16 +57,16 @@ def run(context):
         rootComp = design.rootComponent
 
         # Specify the folder to write out the results.
-        base_folder = 'C:/temp/STLExport/'
+        #base_folder = 'C:/temp/STLExport/'
+        base_folder = select_base_folder(ui)
         part_name=adsk.core.Application.get().activeDocument.name
-        folder = base_folder + part_name+'/'
-
-        # TODO: Add a file dialog to set the save path with the default based on the "folder" variable
-        
+        part_name = part_name.replace(" ", "_")
+        folder = os.path.join(base_folder, part_name)
         file_base = part_name
 
         if not os.path.exists(folder):
             os.makedirs(folder)
+        
 
         # Get the parameters named "Length" and "Width" to change.                
         params_to_use = []
@@ -99,7 +137,7 @@ def run(context):
             adsk.doEvents()
                 
             # Construct the output filename.
-            filename = folder + file_base + file_str + '.stl'
+            filename = os.path.join(folder, file_base + file_str + '.stl')
             
             # Save the file as STL.
             exportMgr = adsk.fusion.ExportManager.cast(design.exportManager)
