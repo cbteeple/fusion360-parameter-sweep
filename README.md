@@ -7,13 +7,13 @@ Do nice parameter sweeps and save them as STL's
     - `sweep` tells the script to use that parameter in the sweep
     - `#` are all of the parameter values to use
 
-![Image of Parameters Window](https://github.com/cbteeple/fusion360-parameter-sweep/tree/master/img/params_window.jpg)
+![Image of Parameters Window](https://github.com/cbteeple/fusion360-parameter-sweep/blob/master/img/parameter_box.png)
 
-![Image of Model](https://github.com/cbteeple/fusion360-parameter-sweep/tree/master/img/sketch.jpg)
+![Image of Model](https://github.com/cbteeple/fusion360-parameter-sweep/blob/master/img/sketch.png)
 
-![Image of Model](https://github.com/cbteeple/fusion360-parameter-sweep/tree/master/img/model.jpg)
+![Image of Model](https://github.com/cbteeple/fusion360-parameter-sweep/blob/master/img/model.png)
 
-![Image of Parameters Window](https://github.com/cbteeple/fusion360-parameter-sweep/tree/master/img/objects.jpg)
+![Image of Parameters Window](https://github.com/cbteeple/fusion360-parameter-sweep/blob/master/img/objects.png)
 
 ## Usage
 1. Just run the script.
