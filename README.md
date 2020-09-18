@@ -18,3 +18,6 @@ Do nice parameter sweeps and save them as STL's
 ## Usage
 1. Just run the script.
 2. Enjoy!
+
+## Example:
+Check out this [public Fusion360 file](https://a360.co/3ccKL1B)
