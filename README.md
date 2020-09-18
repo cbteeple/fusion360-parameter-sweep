@@ -9,6 +9,12 @@ Do nice parameter sweeps and save them as STL's
 
 ![Image of Parameters Window](https://github.com/cbteeple/fusion360-parameter-sweep/img/params_window.jpg)
 
+![Image of Model](https://github.com/cbteeple/fusion360-parameter-sweep/img/sketch.jpg)
+
+![Image of Model](https://github.com/cbteeple/fusion360-parameter-sweep/img/model.jpg)
+
+![Image of Parameters Window](https://github.com/cbteeple/fusion360-parameter-sweep/img/objects.jpg)
+
 ## Usage
 1. Just run the script.
 2. Enjoy!

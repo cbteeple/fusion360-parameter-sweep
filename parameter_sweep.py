@@ -25,7 +25,7 @@ def select_base_folder(ui,start_path=None):
     
     # Set styles of file dialog.
     folderDlg = ui.createFolderDialog()
-    folderDlg.title = 'Select the base folder'
+    folderDlg.title = 'Select where you want to save your STL files'
     folderDlg.initialDirectory	= start_path
     
     # Show folder dialog
