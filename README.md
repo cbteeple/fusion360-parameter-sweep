@@ -7,6 +7,8 @@ Do nice parameter sweeps and save them as STL's
     - `sweep` tells the script to use that parameter in the sweep
     - `#` are all of the parameter values to use
 
+![Image of Parameters Window](https://github.com/cbteeple/fusion360-parameter-sweep/img/params_window.jpg)
+
 ## Usage
 1. Just run the script.
 2. Enjoy!
