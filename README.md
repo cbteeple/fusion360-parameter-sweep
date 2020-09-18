@@ -14,6 +14,7 @@ Do nice parameter sweeps and save them as STL's
 ## Example:
 Check out this [public Fusion360 file](https://a360.co/3ccKL1B)
 
+Sketch | Model
 :-------------------------:|:-------------------------:
 ![Image of Sketch](https://github.com/cbteeple/fusion360-parameter-sweep/raw/master/img/sketch.PNG)  |  ![Image of Model](https://github.com/cbteeple/fusion360-parameter-sweep/raw/master/img/model.PNG)
 
